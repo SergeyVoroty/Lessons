@@ -1,0 +1,22 @@
+
+$urlMontserratBoldWoff: url("./fonts/Montcerrat/Bold-700/Montserrat-Bold.woff");
+$urlMontserratBoldTtf: url("./fonts/Montcerrat/Bold-700/Montserrat-Bold.ttf");
+$urlMontserratBoldSvg: url("./fonts/Montcerrat/Bold-700/Montserrat-Bold.svg");
+$urlMontserratRegularWoff: url("./fonts/Montcerrat/Regular-400/Montserrat-Regular.woff");
+$urlMontserratRegularTtf: url("./fonts/Montcerrat/Regular-400/Montserrat-Regular.ttf");
+$urlMontserratRegularSvg: url("./fonts/Montcerrat/Regular-400/Montserrat-Regular.svg");
+@font-face {
+  font-family: 'Montserat-Bold';
+  src: local('Montserat-Bold'),
+  $urlMontserratBoldWoff,
+  $urlMontserratBoldTtf,
+  $urlMontserratBoldSvg;
+}
+
+@font-face {
+  font-family: 'Montserat-Regular';
+  src: local('Montserat-Regular'),
+  $urlMontserratRegularWoff,
+  $urlMontserratRegularTtf,
+  $urlMontserratRegularSvg;
+}

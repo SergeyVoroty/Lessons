@@ -1,7 +1,7 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-// const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserWebpackPlugin = require('terser-webpack-plugin')
@@ -25,13 +25,7 @@ const optimization = () => {
 }
 
 const cssLoaders = extra => {
-    const loaders = [{
-        loader: MiniCSSExtractPlugin.loader,
-        options: {
-        }
-    },
-        'css-loader'
-    ]
+    const loaders = [MiniCSSExtractPlugin.loader, 'css-loader']
     if (extra) {
         loaders.push(extra)
     }
@@ -66,12 +60,14 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             filename: 'index.html',
-            template: './index.pug'
+            template: './index.pug',
+            minify: false
         }),
         new CleanWebpackPlugin(),
         new MiniCSSExtractPlugin({
             filename: '[name].[contenthash].bundle.css'
-        })
+        }),
+        // new CopyWebpackPlugin()
     ],
     module: {
         rules: [
@@ -96,16 +92,21 @@ module.exports = {
                 test: /\.(ttf|woff|woff2|eot)$/,
                 use: ['file-loader']
             },
+
             {
                 test: /\.pug$/,
                 use: [
                     {
-                        loader: 'html-loader'
+                        loader: 'html-loader',
+                        options: {
+                            minimize: false
+                        }
                     },
                     {
                         loader: 'pug-html-loader',
                         options: {
-                            "pretty":false
+                            pretty: false,
+                            minify: false
                         }
                     }
                 ]

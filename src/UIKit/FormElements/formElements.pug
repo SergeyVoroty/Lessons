@@ -40,7 +40,7 @@ mixin textField(options)
 mixin expandableCheckboxList(value, ...items)
     .expandableCheckboxListContainer
         lable(class= 'expandableCheckboxList')= value
-        div(onclick= 'expandableCheckboxListContainer_expandable()').expandableCheckboxListContainer_expend_more_icon
+        .expandableCheckboxListContainer_expend_more_icon
     each item in items
         .expandableCheckboxListItemsContainer
             input(type= 'checkbox' class= 'expandableCheckboxList_checkboxitem')
