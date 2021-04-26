@@ -1,0 +1,47 @@
+
+mixin button(options)
+    -var buttonClass = 'btn'
+    case options.type
+        when 'fillButton'
+            -buttonClass += ' btn_default'
+            if options.long
+                -buttonClass += ' btn_long'
+        when 'borderedButton'
+            -buttonClass += ' btn_bordered'
+        when 'goestButton'
+            -buttonClass += ' btn_goest'
+        default
+            -buttonClass += ' btn_default'
+    div(class= buttonClass)
+        input(type= 'button' value= options.title).btn_insert
+
+
+mixin textField(options)
+    -var type = options.type ? options.type : 'text'
+    -var name = options.name ? options.name : 'default'
+    -var value = options.value ? options.value : 'default'
+    -var textfieldClass = 'textfield'
+    if options.textfieldIsDate
+        -value = 'ДД.ММ.ГГГГ'
+        -type = 'text'
+    if options.textfieldIsFilterDate
+        -value = '19 авг - 23 авг'
+        -type = 'text'
+    -textfieldClass += options.dropdown ? ' textfield_dropdown' : ''
+    -textfieldClass += options.textfieldIsDate ? ' textfield_date_dropdown' : ''
+    -textfieldClass += options.textfieldIsFilterDate ? ' textfield_filter_date_dropdown' : ''
+    if options.dropdown
+        .textfieldflex
+            input(type= type name = name value= value readonly='true' class= textfieldClass)
+            .expend_more_icon
+    else
+        input(type= type name = name value= value class= textfieldClass)
+
+mixin expandableCheckboxList(value, ...items)
+    .expandableCheckboxListContainer
+        lable(class= 'expandableCheckboxList')= value
+        div(onclick= 'expandableCheckboxListContainer_expandable()').expandableCheckboxListContainer_expend_more_icon
+    each item in items
+        .expandableCheckboxListItemsContainer
+            input(type= 'checkbox' class= 'expandableCheckboxList_checkboxitem')
+            lable= item

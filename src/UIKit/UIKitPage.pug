@@ -1,0 +1,16 @@
+include ./FormElements/formElements
+hr
++button({type: 'fillButton', link: '#', title: 'Click Me'})
++button({type: 'borderedButton', link: '#', title: 'Click Me'})
++button({type: 'goestButton', link: '#', title: 'Click Me'})
++button({type: 'fillButton', link: '#', title: 'Перейти к оплате', long: true})
+
+hr
+hr
+
++textField({name:'default',type:'email',value:'email'})
++textField({name:'default',type:'email',value:'Сколько гостей', dropdown:true})
++textField({name:'default',type:'email',value:'email', dropdown:true, textfieldIsDate: true})
++textField({name:'default',type:'email',value:'email', dropdown:true, textfieldIsDate: true, textfieldIsFilterDate: true})
++textField({name:'default',type:'email',value:'2 спальни, 1 гостинная', dropdown:true})
++expandableCheckboxList('expandableCheckboxList', 1, 2, 3, 4, 5)

@@ -1,0 +1,155 @@
+body {
+  font-family: 'Montserat-Regular';
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.75); }
+
+h1, h2, h3 {
+  font-family: 'Montserat-Bold'; }
+
+h1 {
+  font-size: 24px; }
+
+h2 {
+  font-size: 19px; }
+
+h3 {
+  font-size: 12px; }
+
+a {
+  text-decoration: none; }
+
+.btn {
+  display: block;
+  width: 99px;
+  height: 44px;
+  border-radius: 22px;
+  border: none; }
+  .btn .btn_insert {
+    font-family: Montserat-bold, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none; }
+
+.btn:hover {
+  opacity: 0.5; }
+
+.btn_default {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+
+.btn_long {
+  width: 320px; }
+
+.btn_long:after {
+  content: url(d4701dff7a6e939030dcf05d97a876b9.svg);
+  display: block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  margin-top: -44px;
+  float: right; }
+
+.btn_bordered {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+  .btn_bordered .btn_insert {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    width: 95px;
+    height: 40px;
+    border-radius: 22px;
+    background: #fff;
+    color: #BC9CFF; }
+
+.btn_goest {
+  display: inline;
+  background: none; }
+  .btn_goest .btn_insert {
+    color: #BC9CFF; }
+
+.btn_goest:hover {
+  opacity: 1; }
+  .btn_goest:hover .btn_insert {
+    color: rgba(31, 32, 65, 0.5); }
+
+.textfield {
+  font-family: Montserat-bold, sans-serif;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.25);
+  display: block;
+  width: 318px;
+  height: 42px;
+  padding-left: 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  z-index: 0;
+  background: none; }
+
+::-webkit-datetime-edit {
+  display: none; }
+
+::-webkit-datetime-edit-fields-wrapper {
+  display: none; }
+
+::-webkit-datetime-edit-text {
+  display: none; }
+
+::-webkit-datetime-edit-month-field {
+  display: none; }
+
+::-webkit-datetime-edit-day-field {
+  display: none; }
+
+::-webkit-datetime-edit-year-field {
+  display: none; }
+
+::-webkit-inner-spin-button {
+  display: none; }
+
+::-webkit-calendar-picker-indicator {
+  display: none; }
+
+.textfield:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.5); }
+
+.textfieldflex {
+  display: flex; }
+
+.expend_more_icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin-left: -44px;
+  z-index: -1;
+  background: url(f1d0b03ffb3ec3dc0ed836dc0d75ed72.svg) 50% 50% no-repeat; }
+
+.textfield_date_dropdown {
+  width: 150px; }
+
+.textfield_filter_date_dropdown {
+  width: 266px; }
+
+.expandableCheckboxListContainer {
+  display: block;
+  width: 320px; }
+
+.expandableCheckboxListContainer_expend_more_icon {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background: url(f1d0b03ffb3ec3dc0ed836dc0d75ed72.svg) 50% 50% no-repeat; }
+
+.expandableItem_Clicked {
+  background-color: #555; }
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto; }
+
