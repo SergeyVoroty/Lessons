@@ -41,7 +41,8 @@ mixin expandableCheckboxList(value, ...items)
     .expandableCheckboxListContainer
         lable(class= 'expandableCheckboxList')= value
         .expandableCheckboxListContainer_expend_more_icon
-    each item in items
-        .expandableCheckboxListItemsContainer
-            input(type= 'checkbox' class= 'expandableCheckboxList_checkboxitem')
-            lable= item
+    ul.expandableCheckboxListItemsContainer
+        each item in items
+            li.expandableCheckboxListItemContainer
+                input(type= 'checkbox' class= 'expandableCheckboxList_checkboxitem')
+                lable(class= 'expandableCheckboxList_item')= item

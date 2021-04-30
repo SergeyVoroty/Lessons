@@ -27,7 +27,9 @@ h3 {
 a {
   text-decoration: none;
 }
-
+li {
+  display: block;
+}
 .btn {
   display: block;
   width: 99px;
@@ -100,7 +102,7 @@ $textfieldBorderHover: 1px solid $colorDarkShade50;
   font-size: 14px;
   color:$colorDarkShade25;
   display: block;
-  width: 318px;
+  width: 305px;
   height: 42px;
   padding-left: 15px;
   border: $textfieldBorder;
@@ -134,14 +136,22 @@ $textfieldBorderHover: 1px solid $colorDarkShade50;
 }
 
 .textfield_date_dropdown {
-  width: 150px;
+  width: 135px;
 }
 .textfield_filter_date_dropdown {
-  width: 266px;
+  width: 251px;
 }
 .expandableCheckboxListContainer {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   width: 320px;
+}
+.expandableCheckboxList {
+  font-family: 'Montserat-bold',sans-serif;
+  font-size: 12px;
+  line-height: 44px;
+  text-transform: uppercase;
+  color:$colorDarkShade100;
 }
 .expandableCheckboxListContainer_expend_more_icon {
   display: inline-block;
@@ -157,7 +167,26 @@ $textfieldBorderHover: 1px solid $colorDarkShade50;
 }
 .expandableCheckboxListItemsContainer {
   display: none;
+  width: 320px;
 }
 .expandableCheckboxListItemsContainer_expanded {
   display: block;
+}
+.expandableCheckboxList_checkboxitem {
+  opacity: 0;
+}
+.expandableCheckboxList_item:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $colorDarkShade25;
+  border-radius: 4px;
+}
+.expandableCheckboxListItemContainer {
+  display: flex;
+
+}
+.expandableCheckboxList_item_checked:before {
+  content: url("./UIKit/FormElements/Vector.svg");
 }
