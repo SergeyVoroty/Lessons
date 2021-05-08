@@ -180,63 +180,24 @@ li {
   width: 251px;
 }
 
-.expandableCheckboxListContainer {
-  display: flex;
-  justify-content: space-between;
-  width: 320px;
-}
-
 .expandableCheckboxList {
   font-family: "Montserat-bold", sans-serif;
   font-size: 12px;
+  color: #1F2041;
+  display: inline-block;
+  width: 266px;
+  height: 44px;
   line-height: 44px;
   text-transform: uppercase;
-  color: #1F2041;
 }
 
-.expandableCheckboxListContainer_expend_more_icon {
+.expandableCheckboxList:after {
+  content: url(f1d0b03ffb3ec3dc0ed836dc0d75ed72.svg);
   display: inline-block;
+  float: right;
+  position: relative;
   width: 44px;
   height: 44px;
-  background: url(f1d0b03ffb3ec3dc0ed836dc0d75ed72.svg) 50% 50% no-repeat;
-}
-
-.expandableCheckboxListContainer_expend_more_icon_expanded {
-  background: url(72a7b4441b0f1e18dacdff9492333578.svg) 50% 50% no-repeat;
-}
-
-.expandableItem_Clicked {
-  background-color: #555;
-}
-
-.expandableCheckboxListItemsContainer {
-  display: none;
-  width: 320px;
-}
-
-.expandableCheckboxListItemsContainer_expanded {
-  display: block;
-}
-
-.expandableCheckboxList_checkboxitem {
-  opacity: 0;
-}
-
-.expandableCheckboxList_item:before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-}
-
-.expandableCheckboxListItemContainer {
-  display: flex;
-}
-
-.expandableCheckboxList_item_checked:before {
-  content: url(244f1cec71d83f960fc7ddcd0f3e42bc.svg);
 }
 
 .container {

@@ -38,11 +38,9 @@ mixin textField(options)
         input(type= type name = name value= value class= textfieldClass)
 
 mixin expandableCheckboxList(value, ...items)
-    .expandableCheckboxListContainer
-        lable(class= 'expandableCheckboxList')= value
-        .expandableCheckboxListContainer_expend_more_icon
+    lable(class= 'expandableCheckboxList')= value
     ul.expandableCheckboxListItemsContainer
         each item in items
             li.expandableCheckboxListItemContainer
-                input(type= 'checkbox' class= 'expandableCheckboxList_checkboxitem')
+                //input(type= 'checkbox' class= 'expandableCheckboxList_checkboxitem')
                 lable(class= 'expandableCheckboxList_item')= item
