@@ -200,6 +200,38 @@ li {
   height: 44px;
 }
 
+.expandableCheckboxList_expanded:after {
+  content: url(72a7b4441b0f1e18dacdff9492333578.svg);
+  display: inline-block;
+  float: right;
+  position: relative;
+  width: 44px;
+  height: 44px;
+}
+
+.expandableCheckboxListItemsContainer {
+  display: none;
+}
+
+.expandableCheckboxList_item:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  align-content: center;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+
+.expandableCheckboxListItemsContainer_extended {
+  display: block;
+}
+
+.expandableCheckboxList_item_checked:before {
+  content: url(244f1cec71d83f960fc7ddcd0f3e42bc.svg);
+}
+
 .container {
   max-width: 1160px;
   margin: 0 auto;

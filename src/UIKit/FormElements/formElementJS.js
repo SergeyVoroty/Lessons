@@ -1,18 +1,18 @@
 import * as $ from 'jquery'
 let isExpanded = false
 let expandedFirst = false
-if (!$('.expandableCheckboxListContainer').hasClass('clicked')) {
+if (!$('.expandableCheckboxList').hasClass('clicked')) {
     let checkeble = true
-    $('.expandableCheckboxListContainer').on('click', function () {
+    $('.expandableCheckboxList').on('click', function () {
 
-        if (!$('.expandableCheckboxListItemsContainer').hasClass('expandableCheckboxListItemsContainer_expanded')) {
+        if (!$('.expandableCheckboxList').hasClass('expandableCheckboxList_expanded')) {
 
-            $('.expandableCheckboxListItemsContainer').addClass('expandableCheckboxListItemsContainer_expanded')
-            $('.expandableCheckboxListContainer_expend_more_icon').addClass('expandableCheckboxListContainer_expend_more_icon_expanded')
+            $('.expandableCheckboxList').addClass('expandableCheckboxList_expanded')
+            $('.expandableCheckboxListItemsContainer').addClass('expandableCheckboxListItemsContainer_extended')
             let isChecked = false
-            if (!$('.expandableCheckboxListItemsContainer_expanded').hasClass('checkeble')) {
-                $('.expandableCheckboxListItemsContainer_expanded').addClass('checkeble')
-                var items = $('.expandableCheckboxListItemsContainer_expanded').children()
+            if (!$('.expandableCheckboxList').hasClass('checkeble')) {
+                $('.expandableCheckboxList').addClass('checkeble')
+                var items = $('.expandableCheckboxListItemContainer').children()
                 console.log('checked', items)
                 $.each(items, function (index, element) {
                     // let isChecked = false
@@ -31,12 +31,13 @@ if (!$('.expandableCheckboxListContainer').hasClass('clicked')) {
             }
             // isExpanded = true
         } else {
-            $('.expandableCheckboxListItemsContainer').removeClass('expandableCheckboxListItemsContainer_expanded')
-            $('.expandableCheckboxListContainer_expend_more_icon').removeClass('expandableCheckboxListContainer_expend_more_icon_expanded')
+            // $('.expandableCheckboxList').removeClass('expandableCheckboxListItemsContainer_expanded')
+            $('.expandableCheckboxList_expanded').removeClass('expandableCheckboxList_expanded')
+            $('.expandableCheckboxListItemsContainer').removeClass('expandableCheckboxListItemsContainer_extended')
             isExpanded = false
         }
         console.log('Expend is clicked')
 
     })
-    $('.expandableCheckboxListContainer').addClass('clicked')
+    $('.expandableCheckboxList').addClass('clicked')
 }

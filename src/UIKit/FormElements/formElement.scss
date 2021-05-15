@@ -159,6 +159,33 @@ $textfieldBorderHover: 1px solid $colorDarkShade50;
   width: 44px;
   height: 44px;
 }
+.expandableCheckboxList_expanded:after {
+  content: url('./UIKit/FormElements/expand_more_expanded.svg');
+  display: inline-block;
+  float: right;
+  position: relative;
+  width: 44px;
+  height: 44px;
+}
+.expandableCheckboxListItemsContainer {
+  display: none;
+}
+.expandableCheckboxList_item:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  align-content: center;
+  border: 1px solid $colorDarkShade25;
+  border-radius: 4px;
+}
+.expandableCheckboxListItemsContainer_extended {
+  display: block;
+}
+.expandableCheckboxList_item_checked:before {
+  content: url('./UIKit/FormElements/Vector.svg');
+}
 //.expandableCheckboxListContainer {
 //  display: flex;
 //  justify-content: space-between;
